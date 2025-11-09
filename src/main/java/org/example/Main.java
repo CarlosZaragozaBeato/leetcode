@@ -1,28 +1,33 @@
 package org.example;
 
+import org.example.solutions.ContainsDuplicate;
+
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     static void main() {
-//        int[] nums = {1,2,3,1};
-        int[] nums = {1,2,3,4};
+        // Solutions
+        int[] nums = {1,2,3,4,1,23,4};
+        ContainsDuplicate currentSolution = new ContainsDuplicate(nums);
 
-        boolean result = containsDuplicate(nums);
-        System.out.println(result);
 
-    }
-    static boolean containsDuplicate(int[] nums){
-        Set<Integer> seen = new HashSet<>();
 
-        for (int num: nums){
-            if (seen.contains(num)){
-                return true;
-            }
+
+
+        // Check results
+        HashMap<String, Boolean> results = new HashMap<String, Boolean>();
+        results.put("solution1", currentSolution.solution1());
+        results.put("solution2", currentSolution.solution1());
+        results.put("solution3", currentSolution.solution1());
+        results.put("solution4", currentSolution.solution1());
+        for(Map.Entry<String, Boolean> entry: results.entrySet()){
+            String key = entry.getKey();
+            boolean value = entry.getValue();
+            IO.println("KEY: " + key + " VALUE: " + value);
         }
 
-        return false;
     }
 }
