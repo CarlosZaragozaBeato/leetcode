@@ -13,15 +13,26 @@ public class MissingNumber {
 
 
     public int solution1(){
-        // 3, 0 ,1
         int result = 0;
         Arrays.sort(this.nums);
-
-        for (int i = 0; i < this.nums.length; i++) {
-            if (result == this.nums[i]){
+        for (int num : this.nums) {
+            if (result == num) {
                 result++;
             }
         }
         return result;
+    }
+
+    public int solution2(){
+        int n = nums.length;
+        int[] v = new int[n+1];
+        Arrays.fill(v, -1);
+        for (int num : nums) {
+            v[num] = num;
+        }
+        for (int i = 0; i < v.length; i++) {
+            if(v[i] == -1) return i;
+        }
+        return 0;
     }
 }

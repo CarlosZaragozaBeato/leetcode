@@ -18,14 +18,16 @@ public class Main {
 
         // Check results
         HashMap<String, Integer> results = new HashMap<String, Integer>();
-        results.put("solution1", currentSolution.solution1());
-        //results.put("solution2", currentSolution.solution1());
+        // String solution = String.valueOf(currentSolution.solution1());
+        String solution2 = String.valueOf(currentSolution.solution2());
+
+
         //results.put("solution3", currentSolution.solution1());
         //results.put("solution4", currentSolution.solution1());
-        for (Map.Entry<String, Integer> entry : results.entrySet()) {
-            String key = entry.getKey();
-            int value = entry.getValue();
-            System.out.println("KEY: " + key + " VALUE: " + value);
-        }
+        //for (Map.Entry<String, Integer> entry : results.entrySet()) {
+        //    String key = entry.getKey();
+        //    int value = entry.getValue();
+        //    System.out.println("KEY: " + key + " VALUE: " + value);
+        //}
     }
 }
